@@ -1,2 +1,1 @@
-# infra-az-azdevops-controlBranch
-Deleção de Branchs que não tiveram commit até um determinado periodo
+## REPOSITÓRIO CRIADO COM CONFIGURAÇÃO DE CRON PARA DELEÇÃO DE BRANCHES STALES DO PROJETO "PRJ-PCO"

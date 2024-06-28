@@ -1,0 +1,25 @@
+name: Delete Stale Branches
+
+trigger:
+  - none
+ 
+schedules:
+  - cron: "0 3 26 * *"
+    displayName: Run at midnight on the 25th of each month
+    branches:
+      include:
+        - main
+    always: true
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  - group: "Cron"
+
+steps:
+- powershell: >
+    .\cron-delete\delete-stale-branches.ps1
+  displayName: PS Delete Branch Script
+  env:
+    AZURE_DEVOPS_EXT_PAT: $(PAT Criado no Az Devops>)
